@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananda Shayla - Portfólio</title>
+    <link rel="icon" href="./images/icon-aba.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Biblioteca dos ícones - Font Awesome -->
+    <link href="https://rsms.me/inter/inter.css" rel="stylesheet"> <!-- Biblioteca da fonte Inter-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> <!-- Biblioteca da fonte Reboto -->
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media-queries.css">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#certificates">Certificados</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="toggle-theme">
+            <i id="theme-icon" class="fa-regular fa-sun"></i>
+        </button>
+        <button id="open-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-left">
+                <div class="home-presentation">
+                    <p>Olá! Eu sou</p>
+                    <h1>Ananda Shayla</h1>
+                    <h2>Desenvolvedora Front-End e Estudante de Análise e Desenvolvimento de Sistemas</h2>
+                    <p>Construindo interfaces modernas e funcionais, focando em usabilidade e performance.</p>
+                </div>
+                <div class="home-buttons">
+                    <div class="buttons-nav">
+                        <a href="#contact" class="home-contact">Entre em contato comigo</a>
+                        <a href="#projects" class="home-projects">Ver Projetos</a>
+                    </div>
+                    <div class="buttons-networks">
+                        <a href="https://github.com/ShaylaKumari" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ananda-shayla-kumari/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:anandashayla@hotmail.com" target="_blank">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="home-right">
+                <div class="bash">
+                    <div class="bash-header">
+                        <div class="circle">
+                            <span class="red-circle"></span>
+                            <span class="yellow-circle"></span>
+                            <span class="green-circle"></span>
+                        </div>
+                        <span class="filename">desenvolvedora.js</span>
+                    </div>
+                    <div class="bash-body">
+                        <p>// Desenvolvedora Web</p>
+                        <p><span class="pink">const </span><span class="blue">desenvolvedora</span> = <span class="orange">{</span></p>
+                        <p><span class="purple">nome</span>: <span class="green">'Ananda Shayla Soares Kumari'</span>,</p>
+                        <p><span class="purple">status</span>: <span class="green">'Em formação'</span>,</p>
+                        <p><span class="purple">faseAtual</span>: <span class="green">'Explorando tecnologias e boas práticas'</span>,</p>
+                        <p><span class="purple">objetivoFinal</span>: <span class="green">'Me tornar uma Full Stack Developer'</span>,</p>
+                        <p><span class="purple">mindset</span>: <span class="green">'Aprendizado constante'</span></p>
+                        <p><span class="orange">}</span>;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="about-left">
+                <h2>Sobre mim</h2>
+                <hr>
+                <div class="icon-title">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <h3>Biografia</h3>
+                </div>
+                <p>
+                    Em formação na área de desenvolvimento web, com o objetivo de me tornar uma desenvolvedora Full Stack. Tenho foco em transformar ideias em experiências digitais funcionais e intuitivas, encarando cada desafio como uma oportunidade de crescimento rumo a uma atuação mais completa na área de tecnologia.
+                </p>
+                <div class="education-experience">
+                    <div class="education">
+                        <div class="icon-subtitle">
+                            <i class="fa-solid fa-user-graduate"></i>
+                            <h3>Educação</h3>
+                        </div>
+                        <p>Tecnólogo em Análise e Desenvolvimento de Sistemas</p>
+                        <p>Faculdade Impacta Tecnologia</p>
+                        <p>2024.2 – Previsão: 2026.2</p>
+                    </div>
+                    <div class="experience">
+                        <div class="icon-subtitle">
+                            <i class="fa-solid fa-suitcase"></i>
+                            <h3>Experiência</h3>
+                        </div>
+                        <p>Em busca da primeira oportunidade profissional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="profile-picture">
+                    <img src="./images/profile-picture.png" alt="Imagem de Perfil">
+                    <div class="online-status" title="Disponível para trabalhar!"></div>
+                </div>
+                <h2>Ananda Shayla Soares Kumari</h2>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas</p>
+                <button class="curriculo">
+                    <a href="./images/Currículo Ananda Shayla - Estágio em Desenvolvimento.pdf" download target="_blank"><i class="fa-solid fa-download"></i>Baixar currículo</a>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+:root {
+    --bg-color: #020817;
+    --color-white: #fff;
+    --color-accent: #3B82F6;
+    --color-text: #94A3B8;
+    --color-text-button: #0F172A;
+    --theme-icon-color: #F1C40F;
+    --home-buttons-color: #646464;
+    --background-bash: #0D111F;
+    --color-side-menu: #030b22e0;
+    --color-border-profile: #0b214b;
+
+    --font-base: InterVariable, "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-bash: 'Roboto Mono', ui-monospace, monospace;
+}
+
+.dark-mode {
+    --bg-color: #F6F9FC;
+    --color-white: #344256; 
+    --color-text: #4D6280;
+    --color-text-button: #fff;
+    --theme-icon-color: #F39C12;
+    --background-bash: #fff;
+    --color-side-menu: #f6f9fcd8;
+    --color-border-profile: #CEDCF5;
+}

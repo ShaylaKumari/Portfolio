@@ -1,0 +1,90 @@
+@media (max-width: 1000px) {
+    #home {
+        display: flex;
+        flex-direction: column;
+        padding: 8% 50px;
+        gap: 50px;
+    }
+
+    .home-left, .home-buttons {
+        text-align: center;
+        justify-content: center;
+    }
+
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 845px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 745px) {
+    header {
+        justify-content: flex-end;
+        gap: 30px;
+    }
+
+    #open-menu {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--color-text);
+        font-size: 2.5rem;
+        cursor: pointer;
+        margin-right: 25px;
+        z-index: 1000;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0px;
+        right: 0;
+        height: 100vh;
+        padding: 75px 15px;
+        gap: 30px;
+        transition: right 0.3s ease;
+        font-size: 2rem;
+        background-color: var(--color-side-menu);
+        border-left: 0.5px solid #6a6a6a18;
+        z-index: 999;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    #home {
+        padding: 3% 50px;
+    }
+}
+
+@media (max-width: 555px) {
+    html {
+        font-size: 43.75%;
+    }
+
+    #home {
+        padding: 2% 50px;
+        gap: 28px;
+    }
+    
+    .home-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    #home {
+        padding: 0px 30px;
+    }
+
+    .bash {
+        min-width: 280px;
+    }
+}
