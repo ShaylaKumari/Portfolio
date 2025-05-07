@@ -9,6 +9,7 @@
     --background-bash: #0D111F;
     --color-side-menu: #030b22e0;
     --color-border-profile: #0b214b;
+    --color-project-technology: #3B82F61A;
 
     --font-base: InterVariable, "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --font-bash: 'Roboto Mono', ui-monospace, monospace;
@@ -23,4 +24,5 @@
     --background-bash: #fff;
     --color-side-menu: #f6f9fcd8;
     --color-border-profile: #CEDCF5;
+    --color-project-technology: #2662D91A;
 }

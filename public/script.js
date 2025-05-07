@@ -59,3 +59,25 @@ document.addEventListener("DOMContentLoaded", function () {
     menuIcon.classList.add('fa-bars');
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById('toggleProjects');
+  const hidden = document.querySelectorAll('.hidden-project');
+
+  button.addEventListener('click', () => {
+    const visibles = hidden[0].style.display === 'block';
+
+    hidden.forEach(el => {
+      el.style.display = visibles ? 'none' : 'block';
+    });
+
+    const button = document.getElementById('toggleProjects');
+
+    if (visibles) {
+      button.innerHTML = '<p>Mostrar mais projetos</p><i class="fa-solid fa-chevron-left"></i><i class="fa-solid fa-chevron-right"></i>';
+    } else {
+      button.innerHTML = '<p>Mostrar menos</p><i class="fa-solid fa-angle-up"></i>';
+    }
+  });
+});
