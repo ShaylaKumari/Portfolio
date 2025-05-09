@@ -5,12 +5,17 @@
 
 html {
     font-size: 62.5%; /* 10px */
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--bg-color);
     font-family: var(--font-base);
     font-size: 1.6rem; /* 16px */
+}
+
+section {
+    scroll-margin-top: 80px;
 }
 
 /* TOP-BAR */
@@ -24,10 +29,11 @@ header {
     top: 0;
     padding: 25px 0px;
     gap: 120px;
+    z-index: 2000;
 }
 
 header.blurred {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-nav);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid #02081723;
@@ -67,7 +73,6 @@ main {
     max-width: 1280px;
     padding: 100px 0px;
     margin: 0 auto;
-    /* background-color: #16A34A; */
 }
 
 #home {
@@ -75,7 +80,6 @@ main {
     flex-direction: row;
     align-items: center;
     padding: 20% 50px;
-    /* background-color: red; */
     gap: 30px;
     height: 100%;
 }
@@ -173,8 +177,8 @@ main {
     min-width: 320px;
     color: #6B7280;
     background-color: var(--background-bash);
-    border: 1px solid var(--color-white);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.37);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.089);
+    border: 1px solid #94a3b84d;
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease;
@@ -182,6 +186,7 @@ main {
 
 .bash:hover {
     transform: translateY(-8px);
+
 }
 
 .bash-header {
@@ -220,7 +225,7 @@ main {
 }
 
 .bash-body p {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-family: var(--font-bash);
     margin-top: 8px;
     margin-left: 15px;
@@ -254,10 +259,10 @@ main {
 #about {
     display: flex;
     justify-content: space-between;
-    height: 100%;
     gap: 50px;
-    /* background-color: red; */
     padding: 30px;
+    padding-bottom: 15%;
+    scroll-margin-top: 310px;
 }
 
 .about-left {
@@ -327,7 +332,9 @@ main {
 }
 
 .education, .experience {
-    border: 1px solid #08152D;
+    background-color: var(--bg-form);
+    
+    border: 1px solid #94a3b84d;
     border-radius: 15px;
     padding: 20px;
     max-width: 400px;
@@ -337,6 +344,7 @@ main {
 
 .education:hover, .experience:hover {
     transform: translateY(-5px);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.13);
 }
 
 .about-right {
@@ -430,8 +438,8 @@ main {
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* background-color: red; */
     padding: 30px;
+    padding-bottom: 10%;
 }
 
 .project-title h2 {
@@ -479,6 +487,7 @@ main {
 
 .individual-project:hover, .hidden-project:hover {
     transform: translateY(-4px);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.13);
 }
 
 .individual-project img, .hidden-project img {
@@ -625,6 +634,7 @@ main {
     width: 80%;
     margin: 40px auto;
     gap: 25px 5px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.13);
 }
 
 .skills-content {
@@ -736,7 +746,7 @@ main {
 
 .swiper-button-prev,
 .swiper-button-next {
-    position: static !important; /* evita sobrescrever posição padrão */
+    position: static !important;
     width: 32px;
     height: 32px;
     border: 1px solid #94a3b84d;
@@ -756,7 +766,6 @@ main {
   font-weight: 900;
 }
 
-/* Remove setas extras padrão do Swiper */
 .swiper-button-prev::after,
 .swiper-button-next::after {
   font-size: 1rem;
@@ -775,6 +784,7 @@ main {
 
 .swiper-slide:hover {
     transform: translateY(-5px);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.13);
 }
 
 .swiper-slide h3 {
@@ -806,7 +816,7 @@ main {
 
 /* CONTACT */
 #contact {
-    padding: 30px;
+    padding: 12% 30px 5% 30px;
 }
 
 #contact h2 {
@@ -882,7 +892,7 @@ main {
 }
 
 .network-icon i {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 10px 12px;
     border-radius: 50%;
     color: var(--color-text);
@@ -900,6 +910,8 @@ main {
     border: 1px solid #94a3b84d;
     border-radius: 10px;
     padding: 30px;
+    background-color: var(--bg-form);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.13);
 }
 
 .name-email {
@@ -914,7 +926,7 @@ main {
 
 .form-title input, .form-title textarea {
     border: 1px solid #94a3b84d;
-    background: none;
+    background: var(--bg-input);
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -958,6 +970,56 @@ main {
 
 #contact-form button:hover {
     background-color: #3073df;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0B1523;
+    color: #9CA3AF;
+    padding: 4.8rem 0rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15%;
+    gap: 30px;
+}
+
+.footer-left {
+    line-height: 28px;
+    font-size: 1.6rem;
+    max-width: 400px;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+
+.icon-footer a {
+    text-decoration: none;
+    color: #9CA3AF;
+}
+
+.icon-footer i {
+    font-size: 2rem;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+
+.icon-footer i:hover {
+    color: var(--color-accent);
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+}
+
+.footer-right p {
+    font-size: 1.4rem;
+    margin-top: 10px;
 }
 
 

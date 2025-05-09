@@ -1,5 +1,6 @@
 :root {
     --bg-color: #020817;
+    --bg-color-nav: #020817c2;
     --color-white: #fff;
     --color-accent: #3B82F6;
     --color-text: #94A3B8;
@@ -10,6 +11,8 @@
     --color-side-menu: #030b22e0;
     --color-border-profile: #0b214b;
     --color-project-technology: #3B82F61A;
+    --bg-input: transparent;
+    --bg-form: transparent;
 
     --font-base: InterVariable, "Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     --font-bash: 'Roboto Mono', ui-monospace, monospace;
@@ -17,7 +20,9 @@
 
 .dark-mode {
     --bg-color: #F6F9FC;
+    --bg-color-nav: #f6f9fc83;
     --color-white: #344256; 
+    --color-accent: #2662D9;
     --color-text: #4D6280;
     --color-text-button: #fff;
     --theme-icon-color: #F39C12;
@@ -25,4 +30,6 @@
     --color-side-menu: #f6f9fcd8;
     --color-border-profile: #CEDCF5;
     --color-project-technology: #2662D91A;
+    --bg-input: #F7FAFC;
+    --bg-form: #fff;
 }

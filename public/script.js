@@ -1,3 +1,4 @@
+// BORRADO NO NAV
 window.addEventListener('scroll', function () {
   const header = document.querySelector('header');
   if (window.scrollY > 10) {
@@ -7,6 +8,7 @@ window.addEventListener('scroll', function () {
   }
 });
 
+// ALTERNAR TEMA E MENU
 document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById('toggle-theme');
   const themeIcon = document.getElementById('theme-icon');
@@ -15,14 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector('.menu');
   const menuLinks = document.querySelectorAll('.menu a');
 
-  // Função de tema
   function setTheme(isDark) {
     document.documentElement.classList.toggle('dark-mode', isDark);
     themeIcon.className = isDark ? 'fa-regular fa-moon' : 'fa-regular fa-sun';
     localStorage.setItem('darkMode', isDark);
   }
 
-  // Aplica tema salvo
   const savedTheme = localStorage.getItem('darkMode') === 'true';
   setTheme(savedTheme);
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
+// VER MAIS PROJETOS
 document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById('toggleProjects');
   const hidden = document.querySelectorAll('.hidden-project');
@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// CARROSSEL CERTIFICADOS
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
@@ -116,35 +117,36 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 4,
       }
     },
-  
+
   });
 });
 
+// ENVIO DE EMAIL
 emailjs.init('5_j7bjs718JshMdpL');
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', function(event) {
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const serviceID  = 'service_n2vg7zc';
-    const templateID = 'template_yb25uab'; 
+    const serviceID = 'service_n2vg7zc';
+    const templateID = 'template_yb25uab';
 
     const btn = form.querySelector('button[type="submit"]');
-    btn.disabled     = true;
-    btn.textContent  = 'Enviando…';
+    btn.disabled = true;
+    btn.textContent = 'Enviando…';
 
     emailjs.sendForm(serviceID, templateID, this)
-      .then(function() {
+      .then(function () {
         alert('✉️ Mensagem enviada com sucesso!');
         form.reset();
-      }, function(error) {
+      }, function (error) {
         console.error('EmailJS erro:', error);
         alert('🚨 Ocorreu um erro. Tente novamente em instantes.');
       })
-      .finally(function() {
-        btn.disabled    = false;
+      .finally(function () {
+        btn.disabled = false;
         btn.textContent = 'Enviar mensagem';
       });
   });
