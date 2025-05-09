@@ -44,6 +44,10 @@
         font-size: 55%;
     }
 
+    .home-presentation h1 {
+        font-size: 3em;
+    }  
+
     .skills {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
