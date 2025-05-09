@@ -731,6 +731,7 @@ main {
 
 .swiper {
     position: relative;
+    width: 100%;
     padding-top: 60px;
     margin-top: 30px;
 }
@@ -927,6 +928,7 @@ main {
 .form-title input, .form-title textarea {
     border: 1px solid #94a3b84d;
     background: var(--bg-input);
+    color: var(--color-white);
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;

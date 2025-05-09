@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
+    loop: true,
     spaceBetween: 20,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -117,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 4,
       }
     },
-
   });
 });
 
