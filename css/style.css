@@ -781,6 +781,7 @@ main {
     padding: 24px;
     min-height: 130px;
     transition: 0.3s;
+    background: var(--bg-form);
 }
 
 .swiper-slide:hover {
