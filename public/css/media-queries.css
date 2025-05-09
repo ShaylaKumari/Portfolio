@@ -1,3 +1,15 @@
+@media (max-width: 1125px) {
+    .skills {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1025px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1000px) {
     #home {
         display: flex;
@@ -19,6 +31,10 @@
 @media (max-width: 845px) {
     html {
         font-size: 50%;
+    }
+
+    .skills {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -71,6 +87,30 @@
         align-items: center;
         gap: 40px;
     }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .individual-project, .hidden-project {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .contact-left {
+        max-width: 100%;
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
 }
 
 @media (max-width: 555px) {
@@ -85,6 +125,16 @@
     
     .home-buttons {
         flex-direction: column;
+    }
+
+    .individual-project, .hidden-project {
+        max-width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

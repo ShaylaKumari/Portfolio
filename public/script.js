@@ -65,6 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const button = document.getElementById('toggleProjects');
   const hidden = document.querySelectorAll('.hidden-project');
 
+  const isVisible = localStorage.getItem('projectsVisible') === 'true';
+
+  hidden.forEach(el => {
+    el.style.display = isVisible ? 'block' : 'none';
+  });
+
   button.addEventListener('click', () => {
     const visibles = hidden[0].style.display === 'block';
 
@@ -79,5 +85,67 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       button.innerHTML = '<p>Mostrar menos</p><i class="fa-solid fa-angle-up"></i>';
     }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      340: {
+        slidesPerView: 1.5,
+      },
+      410: {
+        slidesPerView: 2,
+      },
+      640: {
+        slidesPerView: 2.5,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1030: {
+        slidesPerView: 3.5,
+      },
+      1135: {
+        slidesPerView: 4,
+      }
+    },
+  
+  });
+});
+
+emailjs.init('5_j7bjs718JshMdpL');
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const serviceID  = 'service_n2vg7zc';
+    const templateID = 'template_yb25uab'; 
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled     = true;
+    btn.textContent  = 'Enviando…';
+
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(function() {
+        alert('✉️ Mensagem enviada com sucesso!');
+        form.reset();
+      }, function(error) {
+        console.error('EmailJS erro:', error);
+        alert('🚨 Ocorreu um erro. Tente novamente em instantes.');
+      })
+      .finally(function() {
+        btn.disabled    = false;
+        btn.textContent = 'Enviar mensagem';
+      });
   });
 });
