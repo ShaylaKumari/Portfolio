@@ -41,7 +41,7 @@
 
 @media (max-width: 845px) {
     html {
-        font-size: 50%;
+        font-size: 52%;
     }
 
     .skills {
@@ -137,10 +137,6 @@
 }
 
 @media (max-width: 555px) {
-    html {
-        font-size: 43.75%;
-    }
-
     #home {
         padding: 2% 50px;
         padding-bottom: 10%;

@@ -731,7 +731,7 @@ main {
 
 .swiper {
     position: relative;
-    width: 100%;
+    width: 100;
     padding-top: 60px;
     margin-top: 30px;
 }
@@ -762,14 +762,14 @@ main {
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  background-color: var(--color-accent);
-  color: var(--color-text-button);
-  font-weight: 900;
+    background-color: var(--color-accent);
+    color: var(--color-text-button);
+    font-weight: 900;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .swiper-slide {
